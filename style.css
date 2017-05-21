@@ -3,23 +3,17 @@ html {
   background: linen;
   background-size: cover;
   height: 100%;
+  min-height:100%;
+  min-width:100%;
 }
+
 body,html {
   margin: 0;
   padding: 0;
-  font-family: "Impact", sans-serif;
+  font-family: 'Playfair Display', sans-serif;
 }
 
-section h1 {
-  text-align: center;
-  font-size: 52px;
-  border: .4rem solid black;
-  border-radius: .5rem;
-  margin: 1rem;
-  background: rgba(0,0,0,0.4);
-  text-shadow: 0 0 .5rem black;
-  color: linen;
-}
+
 
 
 .keys {
@@ -36,7 +30,7 @@ section h1 {
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
-  transition: all .07s ease;
+  transition: all .05s ease;
   width: 10rem;
   text-align: center;
   color: white;
@@ -45,9 +39,9 @@ section h1 {
 }
 
 .playing {
-  transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  transform: scale(1.2);
+  border-color: #ff3232;
+  box-shadow: 0 0 1rem #ff3232;
 }
 
 kbd {
@@ -60,4 +54,91 @@ kbd {
   text-transform: uppercase;
   letter-spacing: .1rem;
   color: #ffc600;
+}
+
+#col1 {
+	float:left;
+	position:relative;
+	overflow:hidden;
+}
+#col2 {
+	float:left;
+	position:relative;
+	overflow:hidden;
+  padding-top: 150px;
+
+}
+
+#col3 {
+	float:left;
+	position:relative;
+	overflow:hidden;
+}
+
+
+.box {
+  width: 300px;
+  height: 300px;
+  border-radius: 200px;
+  box-shadow: 0 2px 30px rgba(black, .2);
+  background: lighten(#f0f4c3, 20%);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  margin: 50px 0px 100px 0px;
+}
+
+.wave {
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: red;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: .2;
+  background: yellow;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  line-height: 300px;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .2em;
+  font-size: 48px;
+  text-shadow: 2px 4px 0 rgba(black, .5);
+  text-indent: .3em;
+}
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+
+
+.wavebox {
+  height: 100px;
+  padding-left: 500px;
+  margin: inherit;
 }
